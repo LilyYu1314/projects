@@ -1,0 +1,21 @@
+package MathSummary;
+
+public class JudgeRouteCircle_657 {
+
+    public boolean judgeCircle(String moves) {
+        int x = 0, y = 0;
+
+        for (char move : moves.toCharArray()) {
+            if (move == 'U') y--;
+            else if (move == 'D') y++;
+            else if (move == 'L') x--;
+            else if (move == 'R') x++;
+        }
+
+        return x == 0 && y == 0;
+    }
+    //Complexity Analysis
+    //Time Complexity: , where is the length of moves. We iterate through the string.
+    //
+    //Space Complexity: . In Java, our character array is .
+}
